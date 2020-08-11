@@ -1,7 +1,7 @@
 FROM alpine:3.8 as conpot-builder
 
 # Install dependencies
-RUN apk add --no-cache ipmitool tcpdump git python3-dev build-base wget py-cffi libxslt-dev openssl-dev libffi-dev
+RUN apk add --no-cache ipmitool tcpdump git python3-dev build-base wget py-cffi libxslt-dev openssl-dev libffi-dev mariadb-connector-c-dev
 
 # Copy the app from the host folder (probably a cloned repo) to the container
 RUN adduser -s /bin/ash -D conpot
